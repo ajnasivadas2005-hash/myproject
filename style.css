@@ -1,0 +1,22 @@
+div1 {
+    background-color: antiquewhite;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.heading_div {
+    border-style: dotted dashed solid double;
+}
+
+img {
+    width: 120px;
+    height: 140px;
+    float: left;
+    margin-top: -150px;
+}
