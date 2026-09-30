@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form id="myForm">
+
+        Name:
+        <input type="text" id="name">
+        <br><br>
+
+        Email:
+        <input type="text" id="email">
+        <br><br>
+
+        Password:
+        <input type="password" id="password">
+        <br><br>
+
+        Address:
+        <input type="text" id="address">
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="message"></p>
+
+
+    <script>
+
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let address = document.getElementById("address").value;
+
+            if (name == "") {
+                document.getElementById("message").innerHTML =
+                    "Please enter your name";
+                return;
+            }
+
+            if (email == "") {
+                document.getElementById("message").innerHTML =
+                    "Please enter your email";
+                return;
+            }
+
+            if (password == "") {
+                document.getElementById("message").innerHTML =
+                    "Please enter your password";
+                return;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("message").innerHTML =
+                    "Password must be at least 6 characters";
+                return;
+            }
+
+            if (address == "") {
+                document.getElementById("message").innerHTML =
+                    "Address is required";
+                return;
+            }
+
+            document.getElementById("message").innerHTML =
+                "Form submitted successfully!";
+
+        });
+
+    </script>
+
+</body>
+</html>
