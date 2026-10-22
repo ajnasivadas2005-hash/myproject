@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form id="myForm">
+
+        Name:
+        <input type="text" id="name" onblur="validateName()">
+        <span id="nameError"></span>
+        <br><br>
+
+        Email:
+        <input type="text" id="email" onblur="validateEmail()">
+        <span id="emailError"></span>
+        <br><br>
+
+        Password:
+        <input type="password" id="password" onblur="validatePassword()">
+        <span id="passwordError"></span>
+        <br><br>
+
+        Address:
+        <input type="text" id="address" onblur="validateAddress()">
+        <span id="addressError"></span>
+
+    </form>
+
+
+    <script>
+
+        function validateName() {
+
+            let name = document.getElementById("name").value;
+
+            if (name == "") {
+                document.getElementById("nameError").innerHTML =
+                    " Please enter your name";
+            } else {
+                document.getElementById("nameError").innerHTML =
+                    " Name is valid";
+            }
+        }
+
+
+        function validateEmail() {
+
+            let email = document.getElementById("email").value;
+
+            if (email == "") {
+                document.getElementById("emailError").innerHTML =
+                    " Please enter your email";
+            } else {
+                document.getElementById("emailError").innerHTML =
+                    " Email is valid";
+            }
+        }
+
+
+        function validatePassword() {
+
+            let password = document.getElementById("password").value;
+
+            if (password == "") {
+                document.getElementById("passwordError").innerHTML =
+                    " Please enter your password";
+            } 
+            else if (password.length < 6) {
+                document.getElementById("passwordError").innerHTML =
+                    " Password must be at least 6 characters";
+            } 
+            else {
+                document.getElementById("passwordError").innerHTML =
+                    " Password is valid";
+            }
+        }
+
+
+        function validateAddress() {
+
+            let address = document.getElementById("address").value;
+
+            if (address == "") {
+                document.getElementById("addressError").innerHTML =
+                    " Address is required";
+            } else {
+                document.getElementById("addressError").innerHTML =
+                    " Address is valid";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
