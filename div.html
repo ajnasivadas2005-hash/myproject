@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swap Text</title>
+</head>
+
+<body>
+
+    <input type="text" id="text1" placeholder="ENTER NAME">
+
+    <input type="text" id="text2" placeholder="ENTER AGE">
+
+    <br><br>
+
+    <button onclick="swapText()">Swap</button>
+
+    <script>
+        function swapText() {
+
+            let text1 = document.getElementById("text1");
+            let text2 = document.getElementById("text2");
+
+            let temp = text1.value;
+
+            text1.value = text2.value;
+            text2.value = temp;
+        }
+    </script>
+
+</body>
+</html>
